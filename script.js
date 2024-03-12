@@ -1,4 +1,4 @@
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 // // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
@@ -50,7 +50,7 @@ gsap.to(".nav h1",{
         scrub: 2,
         start:"top 0%",
         end:"top 5%",
-      }
+    }
 })
 
 gsap.to(".page1 h1",{
@@ -81,40 +81,54 @@ gsap.to(".role h1", {
     }
   })
 
-gsap.from(".elem-div img", {
-    scale:0,
+// gsap.from(".elem-div img", {
+//     scale:0,
+//     opacity:0,
+//     rotate:30,
+//     // duration:1,
+//     stagger:0.1,
+//     yoyo:true,
+//     scrollTrigger:{
+//         trigger:".box",
+//         scroller: "body",
+//         // markers:true,
+//         scrub:true,
+//         // pin:true,
+//         start:"top 80%",
+//         end:"top 10%",
+//     }
+// })
+
+// gsap.from(".elem img", {
+//     scale:0,
+//     opacity:0,
+//     rotate:30,
+//     // duration:1,
+//     stagger:0.1,
+//     // yoyo:true,
+//     scrollTrigger:{
+//         trigger:".elem",
+//         scroller: "body",
+//         markers:true,
+//         scrub:true,
+//         // pin:true,
+//         start:"bottom 100%",
+//         end:"bottom 80%",
+//     }
+// })
+
+gsap.from(".page4 h5 span",{
     opacity:0,
-    rotate:30,
-    // duration:1,
-    stagger:0.1,
-    yoyo:true,
-    scrollTrigger:{
-        trigger:".box",
+    x:"-10px",
+    stagger:1,
+    scrollTrigger: {
+        trigger: ".page3",
         scroller: "body",
         // markers:true,
-        scrub:true,
-        // pin:true,
-        start:"top 80%",
-        end:"top 10%",
-    }
-})
-
-gsap.from(".elem img", {
-    scale:0,
-    opacity:0,
-    rotate:30,
-    // duration:1,
-    stagger:0.1,
-    // yoyo:true,
-    scrollTrigger:{
-        trigger:".elem img",
-        scroller: "body",
-        markers:true,
-        scrub:true,
-        // pin:true,
+        scrub: 4,
         start:"bottom 100%",
-        end:"bottom 80%",
-    }
+        end:"bottom 50%",
+      }
 })
 
 gsap.from(".work-sample img",{
@@ -136,18 +150,18 @@ gsap.from(".work-sample img",{
 
 
 //            js
-// document.addEventListener("keydown", function (event){
-//     if (event.ctrlKey){
-//        event.preventDefault();
-//     }
-//     if(event.keyCode == 123){
-//        event.preventDefault();
-//     }
-// });
+document.addEventListener("keydown", function (event){
+    if (event.ctrlKey){
+       event.preventDefault();
+    }
+    if(event.keyCode == 123){
+       event.preventDefault();
+    }
+});
 
-// document.addEventListener('contextmenu', 
-//      event => event.preventDefault()
-// );
+document.addEventListener('contextmenu', 
+     event => event.preventDefault()
+);
 
 linkedin.addEventListener("click", function (event){
     document.location.href = 'https://linkedin.com/in/therishuraj/' ;
